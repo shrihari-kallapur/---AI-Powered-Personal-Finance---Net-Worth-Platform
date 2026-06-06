@@ -15,7 +15,7 @@ app.add_middleware(
     CORSMiddleware,
 
     allow_origins=[
-        "https://ai-powered-personal-finance-net-wor.vercel.app"
+        "https://ai-powered-personal-finan-git-eca677-shriharikallapurs-projects.vercel.app/"
     ],
 
     allow_credentials=True,
