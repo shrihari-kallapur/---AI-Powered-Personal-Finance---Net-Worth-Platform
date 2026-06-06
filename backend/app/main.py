@@ -12,7 +12,7 @@ app.include_router(zerodha_router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://ai-powered-personal-finance-net-worth.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
