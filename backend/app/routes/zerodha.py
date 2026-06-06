@@ -26,7 +26,7 @@ def login_callback(request_token: str):
     holdings = get_holdings()
 
     return RedirectResponse(
-        url="http://localhost:5173"
+        url="https://ai-powered-personal-finance-net-wor.vercel.app/"
     )
 
 @router.get("/zerodha/holdings")
