@@ -1,7 +1,7 @@
 const connectZerodha = async () => {
 
   const response = await fetch(
-    "https://ai-powered-personal-finance-net-worth.onrender.com/zerodha/login"
+    "http://192.168.31.67:8000/zerodha/login"
   )
 
   const data = await response.json()

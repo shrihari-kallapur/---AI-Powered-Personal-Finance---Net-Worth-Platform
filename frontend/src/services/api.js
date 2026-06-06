@@ -1,7 +1,9 @@
 import axios from "axios"
 
 const api = axios.create({
-  baseURL: "https://ai-powered-personal-finance-net-worth.onrender.com",
+
+    baseURL: "http://192.168.31.67:8000"
+
 })
 
 export default api

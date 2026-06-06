@@ -18,7 +18,7 @@ def zerodha_login():
         "login_url": get_login_url()
     }
 
-@router.get("/login/callback")
+@router.get("/zerodha/login/callback")
 def login_callback(request_token: str):
 
     session_data = generate_session(request_token)
@@ -26,7 +26,7 @@ def login_callback(request_token: str):
     holdings = get_holdings()
 
     return RedirectResponse(
-        url="https://ai-powered-personal-finance-net-wor.vercel.app/"
+        url="http://192.168.31.67:5173"
     )
 
 @router.get("/zerodha/holdings")

@@ -30,9 +30,6 @@ def get_holdings():
 
     global ACCESS_TOKEN
 
-    if not ACCESS_TOKEN:
-            raise Exception("Please login to Zerodha")
-
     kite.set_access_token(ACCESS_TOKEN)
 
     return kite.holdings()
@@ -41,9 +38,6 @@ def get_holdings():
 def get_mf_holdings():
 
     global ACCESS_TOKEN
-
-    if not ACCESS_TOKEN:
-            raise Exception("Please login to Zerodha")
 
     kite.set_access_token(ACCESS_TOKEN)
 
