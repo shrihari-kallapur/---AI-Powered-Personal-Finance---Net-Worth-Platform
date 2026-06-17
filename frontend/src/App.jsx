@@ -1,12 +1,21 @@
-import MainLayout from "./layouts/MainLayout"
-import Dashboard from "./pages/Dashboard"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Dashboard from "./pages/Dashboard";
+import BankAccountsPage from "./pages/BankAccountsPage";
 
 function App() {
   return (
-    <MainLayout>
-      <Dashboard />
-    </MainLayout>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+
+        <Route
+          path="/bank-accounts"
+          element={<BankAccountsPage />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

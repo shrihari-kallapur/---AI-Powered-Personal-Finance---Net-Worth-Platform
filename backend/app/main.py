@@ -3,8 +3,14 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.routes.portfolio import router as portfolio_router
 from app.routes.zerodha import router as zerodha_router
+from app.routes import holdings
+from app.routes import upload
+
+from app.routes import bank_accounts
 
 from dotenv import load_dotenv
+
+from app.routes import bank
 
 load_dotenv()
 
@@ -29,6 +35,22 @@ app.add_middleware(
 app.include_router(zerodha_router)
 
 app.include_router(portfolio_router)
+
+app.include_router(bank.router, prefix="/api")
+
+app.include_router(holdings.router, prefix="/api")
+
+app.include_router(upload.router, prefix="/api")
+
+app.include_router(
+    bank_accounts.router,
+    prefix="/api"
+)
+
+app.include_router(
+    bank_accounts.router,
+    prefix="/api"
+)
 
 @app.get("/")
 def home():

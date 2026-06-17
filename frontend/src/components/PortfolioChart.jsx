@@ -34,13 +34,9 @@ function PortfolioChart({ assets }) {
       h-[500px]
     ">
 
-      <h2 className="text-2xl font-bold mb-5">
-        Asset Allocation
-      </h2>
-
       <ResponsiveContainer
         width="100%"
-        height="90%"
+        height={280}
       >
 
         <PieChart>
@@ -49,7 +45,8 @@ function PortfolioChart({ assets }) {
             data={data}
             dataKey="value"
             nameKey="name"
-            outerRadius={140}
+            outerRadius={125}
+            innerRadius={45}
             label
           >
 

@@ -31,7 +31,6 @@ function Dashboard() {
         );
 
         setPortfolio(response.data);
-        console.log(portfolio);
 
         setMfPortfolio(mfResponse.data);
 
@@ -89,14 +88,12 @@ function Dashboard() {
     );
   }
 
-  if (!portfolio || !portfolio.assets) {
+  if (!portfolio.assets) {
 
     return (
-      <MainLayout>
-        <div className="text-white p-4">
-          No portfolio data available
-        </div>
-      </MainLayout>
+      <div className="text-red-500 text-xl p-4">
+        No assets found
+      </div>
     );
   }
 
@@ -324,7 +321,7 @@ function Dashboard() {
             >
 
               <PortfolioChart
-                assets={portfolio.assets || []}
+                assets={portfolio.assets}
               />
 
             </div>
